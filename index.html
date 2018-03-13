@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Trivia Game</title>
+	 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="assets/javascript/app.js"></script>
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+<body>
+
+	<div class="container_1">
+		<div id="main_content">
+			<div id="title">TOTALLY TRIVIAL TRIVIA!</div>
+			
+			<div id="button">
+				<button class="start" onclick="start();">START</button>
+				
+			</div>
+			<div id="questions" class="content">
+				<div style="font-size: 30px; font-weight: bold; color: #672116;">TIME REMAINING:&nbsp;<span id="timer"></span></div><br>
+			<div id="question_1" style="font-size: 20px; font: bold; color: #ff0000;">What was the first full length CGI movie?</div><br>
+				<div id="answer_1">
+				<input type="radio" name="question_1" class="btn" value="q1_ans1"></input>A Bug's Life
+				<input type="radio" name="question_1" class="btn" value="q1_ans2"></input>Monsters Inc
+				<input type="radio" name="question_1" class="btn" value="q1_ans3"></input>Toy Story
+				<input type="radio" name="question_1" class="btn" value="q1_ans4"></input>The Lion King</div><br>
+			<div id="question_2" style="font-size: 20px; font: bold; color: #ff0000;">Which of these is NOT a name of one of the Spice Girls?</div><br>
+				<div id="answer_2">
+				<input type="radio" name="question_2" class="btn" value="q2_ans1"></input>Sporty Spice
+				<input type="radio" name="question_2" class="btn" value="q2_ans2"></input>Fred Spice
+				<input type="radio" name="question_2" class="btn" value="q2_ans3"></input>Scary Spice
+				<input type="radio" name="question_2" class="btn" value="q2_ans4"></input>Posh Spice</div><br>
+			<div id="question_3" style="font-size: 20px; font: bold; color: #ff0000;">Which NBA team won the most titles in the 90s.?</div><br>
+				<div id="answer_3">
+				<input type="radio" name="question_3" class="btn" value="q3_ans1"></input>New York Knicks
+				<input type="radio" name="question_3" class="btn" value="q3_ans2"></input>Portland Trailblazers
+				<input type="radio" name="question_3" class="btn" value="q3_ans3"></input>Los Angeles Lakers
+				<input type="radio" name="question_3" class="btn" value="q3_ans4"></input>Chicago Bulls</div><br>
+			<div id="question_4" style="font-size: 20px; font: bold; color: #ff0000;">Which group released the hit song "Smells Like Teen Spirit"?</div><br>
+				<div id="answer_4">
+				<input type="radio" name="question_4" class="btn" value="q4_ans1"></input>Nirvana
+				<input type="radio" name="question_4" class="btn" value="q4_ans2"></input>Backstreet Boys
+				<input type="radio" name="question_4" class="btn" value="q4_ans3"></input>Offspring
+				<input type="radio" name="question_4" class="btn" value="q4_ans4"></input>No Doubt</div><br>
+			<div id="question_5" style="font-size: 20px; font: bold; color: #ff0000;">Which popular Disney movie featured the song "Circle of life"?</div><br>
+				<div id="answer_5">
+				<input type="radio" name="question_5" class="btn" value="q5_ans1"></input>Alladin
+				<input type="radio" name="question_5" class="btn" value="q5_ans2"></input>Hercules
+				<input type="radio" name="question_5" class="btn" value="q5_ans3"></input>Mulan
+				<input type="radio" name="question_5" class="btn" value="q5_ans4"></input>The Lion King</div><br>
+			<div id="question_6" style="font-size: 20px; font: bold; color: #ff0000;">Finish this line from the Fresh Prince of Bel-Air theme song "I whistled for a cab and when it came near, the licence plate said ..."</div><br>
+				<div id="answer_6">
+				<input type="radio" name="question_6" class="btn" value="q6_ans1"></input>Dice
+				<input type="radio" name="question_6" class="btn" value="q6_ans2"></input>Mirror
+				<input type="radio" name="question_6" class="btn" value="q6_ans3"></input>Fresh
+				<input type="radio" name="question_6" class="btn" value="q6_ans4"></input>Cab</div><br>	
+			<div id="question_7" style="font-size: 20px; font: bold; color: #ff0000;">What was Doug's best friend's name?</div><br>
+				<div id="answer_7">
+				<input type="radio" name="question_7" class="btn" value="q7_ans1"></input>Skeeter
+				<input type="radio" name="question_7" class="btn" value="q7_ans2"></input>Mark
+				<input type="radio" name="question_7" class="btn" value="q7_ans3"></input>Zack
+				<input type="radio" name="question_7" class="btn" value="q7_ans4"></input>Cody</div><br>	
+			<div id="question_8" style="font-size: 20px; font: bold; color: #ff0000;">What was the name of the principal at Bayside High in Saved By The Bell??</div><br>
+				<div id="answer_8">
+				<input type="radio" name="question_8" class="btn" value="q8_ans1"></input>Mr. Zhou
+				<input type="radio" name="question_8" class="btn" value="q8_ans2"></input>Mr. Driggers
+				<input type="radio" name="question_8" class="btn" value="q8_ans3"></input>Mr. Belding
+				<input type="radio" name="question_8" class="btn" value="q8_ans4"></input>Mr. Page</div><br>	
+
+			<button id="done" class="start" onclick="end()">DONE</button>		
+
+
+			</div>
+			<div id="end" class="content">
+				<div style="font-size: 30px; font-weight: bold; color: #672116;">ALL DONE!</div><br>
+				<div style="font-size: 30px; font-weight: bold; color: #672116;">Correct Answers:&nbsp;<span id="c_a"></span></div><br>
+				<div style="font-size: 30px; font-weight: bold; color: #672116;">Incorrect Answers:&nbsp;<span id="i_a"></span></div><br>
+				<div style="font-size: 30px; font-weight: bold; color: #672116;">Unanswerd:&nbsp;<span id="un_a"></span></div><br>
+
+				
+
+			</div>
+		</div>
+
+	</div>
+
+
+</body>
+</html>
